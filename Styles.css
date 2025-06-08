@@ -1,0 +1,508 @@
+/* CSS HEX */
+:root {
+    --celestial-blue: #1e91d6ff;
+    --french-blue: #0072bbff;
+    --ash-gray: #bac1b8ff;
+    --eerie-black: #1b1b1eff;
+    --papaya-whip: #fff1d0ff;
+}
+
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    min-width: 1200px;
+    width: 100%;
+}
+
+.welcome {
+    background: url("courthouse.jpg");
+    background-size: cover;
+    width: 100vw !important;
+    min-width: 100vw;;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Limit the width of the welcome section */
+}
+
+.welcome-container p{
+    text-align: left;
+    font-size: calc(8rem + 1vw);
+    color: var(--papaya-whip);
+    font-family: "Cal Sans", sans-serif;
+   
+
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--eerie-black);
+    color: var(--papaya-whip);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 2rem;
+
+    max-height: 80px; /* Limit the height of the navbar */
+}
+
+.links-container{
+
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: auto;
+
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--ash-gray);
+    border-radius: 5px;
+}
+
+.tws-header{
+    font-size: 2rem; /* Increase font size */
+    color: white;
+    margin-left: 2vw;
+
+}
+
+h1 {
+    color: var(--french-blue);
+    font-size: calc(6rem + 1vw); /* Slightly larger font size for headings */
+    font-family: "Cal Sans", sans-serif;
+    font-style: normal;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.2em;
+    border-right: var(--french-blue) 10px solid; /* Right border for h1 */
+    padding-right: 1rem; /* Space between text and border */
+    white-space: nowrap;
+}
+
+
+
+
+/* Services Section */
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 7vw;
+    /* margin-left: 2rem; */ /* Remove or comment this out */
+    background-color: white;
+    width: 100%;
+    max-height: 80vh;
+    min-height: 80vh;
+}
+
+.services-container img{
+
+    width: 40%;
+    border-radius: 10px;
+
+}
+
+.services-text {
+
+    max-width: 100%;
+    font-family: 'Cal Sans', sans-serif;
+    text-align: left;
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden;
+}
+
+.description {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.services-text h2 {
+    font-size: calc(5rem + 1vw);
+    color: var(--french-blue);
+}
+
+.services-text p {
+    font-size: calc(1.5rem + 1vw);
+    color: var(--eerie-black);
+    line-height: 1.5;
+    overflow-wrap: break-word; /* Ensures long words break to fit the container */
+    word-wrap: break-word; /* Adds compatibility for older browsers */
+    white-space: normal; /* Allows text to wrap to the next line */
+    margin-right: 2%;
+}
+
+
+
+
+
+
+/* Plans Section */
+
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.plans p{
+
+    font-size: 3rem;
+    
+}
+
+
+.plans h2{
+
+    display: flex;
+    flex-direction: column;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 6rem;
+
+
+}
+
+.features-boxes{
+
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 100vw;
+
+}
+
+.plan-box {
+    flex: 1 1 0;
+    max-width: 22vw; /* Thinner boxes */
+    min-width: 393px; /* Adjust as needed for responsiveness */
+    min-height: 250px;
+    border-radius: 16px;
+    padding: 2rem 1.5rem; /* Slightly less horizontal padding */
+    text-align: center;
+    /* Increased box-shadow for more noticeable effect */
+    box-shadow: 0 8px 32px rgba(30, 145, 214, 0.25), 0 2px 8px rgba(0,0,0,0.10);
+    font-family: 'Cal Sans', sans-serif;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Brighter backgrounds and text colors for each plan */
+.plan-box.basic {
+    background: var(--papaya-whip);
+    border: 2px solid var(--celestial-blue);
+}
+.plan-box.basic h3, .plan-box.basic p {
+    color: var(--celestial-blue);
+}
+
+.plan-box.business {
+    background: var(--celestial-blue);
+    border: 2px solid var(--papaya-whip);
+}
+.plan-box.business h3, .plan-box.business p {
+    color: var(--papaya-whip);
+}
+
+.plan-box.enterprise {
+    background: var(--french-blue);
+    border: 2px solid var(--papaya-whip);
+}
+.plan-box.enterprise h3, .plan-box.enterprise p {
+    color: var(--papaya-whip);
+}
+
+.plan-box h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    max-width: 100%;           /* Ensures text does not exceed box width */
+    overflow-wrap: break-word; /* Wraps long words */
+    word-break: break-word;
+    white-space: normal;
+    font-size: 400%;
+}
+
+.plan-box p {
+    font-size: 3rem;
+    max-width: 100%;           /* Ensures text does not exceed box width */
+    overflow-wrap: break-word; /* Wraps long words */
+    word-break: break-word;
+    white-space: normal;  
+    text-align: center;
+    color: var(--french-blue);
+}
+
+
+
+/*Services Page Styles*/
+
+.web-services  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Use flex-start instead of right */
+    justify-content: space-evenly; /* Align children to the left */
+    width: 50%;
+    margin-left: 3%;
+
+}
+
+.web-services h3 {
+    color: var(--french-blue);
+    font-size: calc(2rem + 1vw);
+    font-family: "Cal Sans", sans-serif;
+    font-style: normal;
+    text-align: left;
+}
+
+.web-services p{
+
+    font-family: "Cal Sans", sans-serif;
+    font-style: normal;
+    text-align: left;
+    font-size: calc(1.5rem + 1vw);
+    color: var(--eerie-black);
+    line-height: 1.5;
+    overflow-wrap: break-word; /* Ensures long words break to fit the container */
+    word-wrap: break-word; /* Adds compatibility for older browsers */
+    white-space: normal; /* Allows text to wrap to the next line */
+
+
+}
+
+.marketing-services{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    justify-content: flex-end; /* Align children to the right */
+    width: 50%;
+    margin-left: auto;
+    margin-right: 3%;
+
+
+}
+
+.marketing-services h3 {
+    color: var(--french-blue);
+    font-size: calc(2rem + 1vw);
+    font-family: "Cal Sans", sans-serif;
+    font-style: normal;
+    text-align: right;
+}
+
+.marketing-services p {
+    font-family: "Cal Sans", sans-serif;
+    font-style: normal;
+    text-align: right;
+    font-size: calc(1.5rem + 1vw);
+    color: var(--eerie-black);
+    line-height: 1.5;
+    overflow-wrap: break-word; /* Ensures long words break to fit the container */
+    word-wrap: break-word; /* Adds compatibility for older browsers */
+    white-space: normal; /* Allows text to wrap to the next line */
+
+    
+}
+
+
+.contact-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Section */
+
+#Footer{
+   width: 100vw;
+   height: 70vh;
+   max-height: 530px;
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-between;
+   padding-bottom: 20px;
+}
+
+#ContactHeader{
+   text-align: left;
+   color: white;
+   font-size: 80px;
+   font-family: "Cal Sans", sans-serif;
+   padding-left: 8vw;
+   margin-bottom: 0;
+   margin-top: 20px;
+
+}
+
+/* Styles for the Email Form */
+#EmailForm {
+   width: 100%;
+   max-width: 600px; /* Restrict maximum width for better layout */
+   padding: 20px;
+
+   border-radius: 8px;
+   background-color: var(--ash-gray);
+   padding: 20px auto; /* Center the form horizontally */
+   box-sizing: border-box; /* Ensure padding is included in width */
+}
+ 
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px; /* Uniform spacing between inputs */
+}
+ 
+input[type="text"], input[type="email"], textarea {
+   width: 100%; /* Take full width of the form container */
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+   font-family: "Cal Sans", sans-serif;
+   box-sizing: border-box; /* Ensure padding is included in width */
+   resize: none;
+}
+ 
+textarea {
+   height: 150px; /* Set a fixed height for better consistency */
+}
+
+label {
+   font-size: 1.2rem;
+   font-family: "Cal Sans", sans-serif;
+}
+ 
+button[type="submit"] {
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   background-color: var(--french-blue);
+   color: #fff;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   align-self: flex-start; /* Align button to the start */
+}
+ 
+button[type="submit"]:hover {
+   background-color: #383f51ff;
+}
+
+#FooterText{
+   margin-top: 20px;
+   text-align: center;
+   color: white;
+   width: 100vw;
+   clear: both;
+}
+
+#ContactOptions{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   width: 100%;
+}
+
+#ContactTable {
+
+   width: 80%;
+   max-width: 600px;
+
+   
+ }
+
+ #ContactTable th, td {
+   
+   text-align: left;
+   vertical-align: middle;
+    font-family: "Cal Sans", sans-serif;
+   color: white;
+   font-size: 40px;
+   
+ }
+
+ #ContactIcon {
+
+   vertical-align: middle;
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+ }
+
+ #ContactTable a {
+   color: white;
+   text-decoration: none;
+ }
